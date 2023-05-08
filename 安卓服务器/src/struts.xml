@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+     <constant name="struts.i18n.encoding" value="gbk"/>
+     <constant name="struts.devMode" value="true" />
+     <!--Struts2中Action对象的创建交给spring完成-->
+     <constant name="struts.objectFactory" value="spring" />   
+       
+          
+	 <package name="login" namespace="/login" extends="struts-default">
+	        <action name="login_*" class="loginAction" method="{1}">
+	        	<result name="main_view">/main.jsp</result>
+	        	<result name="error">/error.jsp</result>
+	        	<result name="input">/login.jsp</result> 
+	        	<result name="login_view">/login.jsp</result>
+	          
+	        </action>  
+	 </package>
+	 
+         <!-- DepartmentAction配置 -->
+         <package name="Department" namespace="/Department" extends="struts-default">
+           <action name="Department_*" class="departmentAction" method="{1}">
+             <result name="add_view">/Department_add.jsp</result>
+             <result name="input">/Department_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Department_query_result.jsp</result>
+             <result name="front_query_view">/Department_frontquery_result.jsp</result>
+             <result name="front_show_view">/Department_frontshow.jsp</result>
+             <result name="modify_view">/Department_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- DoctorAction配置 -->
+         <package name="Doctor" namespace="/Doctor" extends="struts-default">
+           <action name="Doctor_*" class="doctorAction" method="{1}">
+             <result name="add_view">/Doctor_add.jsp</result>
+             <result name="input">/Doctor_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Doctor_query_result.jsp</result>
+             <result name="front_query_view">/Doctor_frontquery_result.jsp</result>
+             <result name="front_show_view">/Doctor_frontshow.jsp</result>
+             <result name="modify_view">/Doctor_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- PatientAction配置 -->
+         <package name="Patient" namespace="/Patient" extends="struts-default">
+           <action name="Patient_*" class="patientAction" method="{1}">
+             <result name="add_view">/Patient_add.jsp</result>
+             <result name="input">/Patient_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Patient_query_result.jsp</result>
+             <result name="front_query_view">/Patient_frontquery_result.jsp</result>
+             <result name="front_show_view">/Patient_frontshow.jsp</result>
+             <result name="modify_view">/Patient_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- ZhuYuanAction配置 -->
+         <package name="ZhuYuan" namespace="/ZhuYuan" extends="struts-default">
+           <action name="ZhuYuan_*" class="zhuYuanAction" method="{1}">
+             <result name="add_view">/ZhuYuan_add.jsp</result>
+             <result name="input">/ZhuYuan_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/ZhuYuan_query_result.jsp</result>
+             <result name="front_query_view">/ZhuYuan_frontquery_result.jsp</result>
+             <result name="front_show_view">/ZhuYuan_frontshow.jsp</result>
+             <result name="modify_view">/ZhuYuan_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- DrugAction配置 -->
+         <package name="Drug" namespace="/Drug" extends="struts-default">
+           <action name="Drug_*" class="drugAction" method="{1}">
+             <result name="add_view">/Drug_add.jsp</result>
+             <result name="input">/Drug_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Drug_query_result.jsp</result>
+             <result name="front_query_view">/Drug_frontquery_result.jsp</result>
+             <result name="front_show_view">/Drug_frontshow.jsp</result>
+             <result name="modify_view">/Drug_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- TreatAction配置 -->
+         <package name="Treat" namespace="/Treat" extends="struts-default">
+           <action name="Treat_*" class="treatAction" method="{1}">
+             <result name="add_view">/Treat_add.jsp</result>
+             <result name="input">/Treat_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/Treat_query_result.jsp</result>
+             <result name="front_query_view">/Treat_frontquery_result.jsp</result>
+             <result name="front_show_view">/Treat_frontshow.jsp</result>
+             <result name="modify_view">/Treat_modify.jsp</result>
+           </action>
+         </package>
+
+         <!-- DrugUseAction配置 -->
+         <package name="DrugUse" namespace="/DrugUse" extends="struts-default">
+           <action name="DrugUse_*" class="drugUseAction" method="{1}">
+             <result name="add_view">/DrugUse_add.jsp</result>
+             <result name="input">/DrugUse_add.jsp</result>
+             <result name="add_success">/message.jsp</result>
+             <result name="delete_success">/message.jsp</result>
+             <result name="modify_success">/message.jsp</result>
+             <result name="error">/error.jsp</result>
+             <result name="query_view">/DrugUse_query_result.jsp</result>
+             <result name="front_query_view">/DrugUse_frontquery_result.jsp</result>
+             <result name="front_show_view">/DrugUse_frontshow.jsp</result>
+             <result name="modify_view">/DrugUse_modify.jsp</result>
+           </action>
+         </package>
+
+
+	 
+	 
+
+ 	 <package name="password" namespace="/password" extends="struts-default">
+	        <action name="ChangePassword" class="changePasswordAction">  
+	        	<result name="change_success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package> 
+	  
+	 <package name="User" namespace="/User" extends="struts-default">
+	        <action name="User_*" class="com.chengxusheji.action.UserAction" method="{1}">  
+	        	<result name="user_query_view">/user_query_result.jsp</result>
+	        	<result name="success">/message.jsp</result>
+	        	<result name="error">/error.jsp</result> 
+	        </action>  
+	 </package>  
+	 
+</struts>

@@ -1,0 +1,60 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="DrugUse" table="DrugUse">
+
+          <!-- 主键用药id -->
+          <id name="drugUseId" column="drugUseId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 治疗名称 -->
+          <many-to-one name="treatObj"
+            column="treatObj"
+            class="Treat"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 多对一属性: 所用药品 -->
+          <many-to-one name="drugObj"
+            column="drugObj"
+            class="Drug"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单浮点型属性: 用药数量 -->
+          <property
+            name="drugCount"
+            column="drugCount"
+            type="float"
+          />
+
+          <!-- 简单浮点型属性: 药品费用 -->
+          <property
+            name="drugMoney"
+            column="drugMoney"
+            type="float"
+          />
+
+          <!-- 简单字符串属性: 用药时间 -->
+          <property
+            name="useTime"
+            column="useTime"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

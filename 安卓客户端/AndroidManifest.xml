@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.mobileclient.activity"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+         android:targetSdkVersion="8"
+         /> 
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" 
+        android:name="com.mobileclient.app.Declare">
+        <activity
+            android:name=".LoginActivity"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        
+        <activity android:name="MainActivity"></activity>
+        <activity android:name="MoreActivity"></activity>
+        <activity android:name="AboutActivity"></activity>
+        <activity android:name="RegisterActivity"></activity>
+        <activity android:name="MainMenuActivity"></activity>
+        <activity android:name="DepartmentListActivity"></activity>
+        <activity android:name="DepartmentQueryActivity"></activity>
+        <activity android:name="DepartmentAddActivity"></activity>
+        <activity android:name="DepartmentEditActivity"></activity>
+        <activity android:name="DepartmentDetailActivity"></activity>
+        <activity android:name="DoctorListActivity"></activity>
+        <activity android:name="DoctorQueryActivity"></activity>
+        <activity android:name="DoctorAddActivity"></activity>
+        <activity android:name="DoctorEditActivity"></activity>
+        <activity android:name="DoctorDetailActivity"></activity>
+        <activity android:name="PatientListActivity"></activity>
+        <activity android:name="PatientQueryActivity"></activity>
+        <activity android:name="PatientAddActivity"></activity>
+        <activity android:name="PatientEditActivity"></activity>
+        <activity android:name="PatientDetailActivity"></activity>
+        <activity android:name="ZhuYuanListActivity"></activity>
+        <activity android:name="ZhuYuanQueryActivity"></activity>
+        <activity android:name="ZhuYuanAddActivity"></activity>
+        <activity android:name="ZhuYuanEditActivity"></activity>
+        <activity android:name="ZhuYuanDetailActivity"></activity>
+        <activity android:name="DrugListActivity"></activity>
+        <activity android:name="DrugQueryActivity"></activity>
+        <activity android:name="DrugAddActivity"></activity>
+        <activity android:name="DrugEditActivity"></activity>
+        <activity android:name="DrugDetailActivity"></activity>
+        <activity android:name="TreatListActivity"></activity>
+        <activity android:name="TreatQueryActivity"></activity>
+        <activity android:name="TreatAddActivity"></activity>
+        <activity android:name="TreatEditActivity"></activity>
+        <activity android:name="TreatDetailActivity"></activity>
+        <activity android:name="DrugUseListActivity"></activity>
+        <activity android:name="DrugUseQueryActivity"></activity>
+        <activity android:name="DrugUseAddActivity"></activity>
+        <activity android:name="DrugUseEditActivity"></activity>
+        <activity android:name="DrugUseDetailActivity"></activity>
+
+        <activity android:name="photoListActivity"></activity>
+        <activity android:name="fileListActivity"></activity>
+    </application>
+
+    
+    <uses-permission android:name="android.permission.INTERNET" />
+
+	<!-- 文件读写权限 -->
+	
+	<uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"></uses-permission>
+    <uses-permission android:name="android.permission.WRITE_MEDIA_STORAGE"></uses-permission>
+	
+	
+</manifest>

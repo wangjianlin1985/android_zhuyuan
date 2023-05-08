@@ -1,0 +1,84 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Patient" table="Patient">
+
+          <!-- 主键病人id -->
+          <id name="patiendId" column="patiendId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 姓名 -->
+          <property
+            name="name"
+            column="name"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 性别 -->
+          <property
+            name="sex"
+            column="sex"
+            type="string"
+            length="4"
+          />
+
+          <!-- 简单日期型属性: 出生日期 -->
+          <property
+            name="birthday"
+            column="birthday"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 身份证号 -->
+          <property
+            name="cardNo"
+            column="cardNo"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 籍贯 -->
+          <property
+            name="originPlace"
+            column="originPlace"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系电话 -->
+          <property
+            name="telephone"
+            column="telephone"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 联系地址 -->
+          <property
+            name="address"
+            column="address"
+            type="string"
+            length="50"
+          />
+
+          <!-- 简单字符串属性: 病历历史 -->
+          <property
+            name="caseHistory"
+            column="caseHistory"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

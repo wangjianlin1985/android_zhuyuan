@@ -1,0 +1,78 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="ZhuYuan" table="ZhuYuan">
+
+          <!-- 主键住院id -->
+          <id name="zhuyuanId" column="zhuyuanId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 多对一属性: 病人 -->
+          <many-to-one name="patientObj"
+            column="patientObj"
+            class="Patient"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单整型属性: 年龄 -->
+          <property
+            name="age"
+            column="age"
+            type="int"
+
+          />
+
+          <!-- 简单日期型属性: 住院日期 -->
+          <property
+            name="inDate"
+            column="inDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单整型属性: 入住天数 -->
+          <property
+            name="inDays"
+            column="inDays"
+            type="int"
+
+          />
+
+          <!-- 简单字符串属性: 床位号 -->
+          <property
+            name="bedNum"
+            column="bedNum"
+            type="string"
+            length="20"
+          />
+
+          <!-- 多对一属性: 负责医生 -->
+          <many-to-one name="doctorObj"
+            column="doctorObj"
+            class="Doctor"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 备注信息 -->
+          <property
+            name="memo"
+            column="memo"
+            type="string"
+            length="500"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Department" table="Department">
+
+          <!-- 主键科室编号 -->
+          <id name="departmentNo" type="string" length="20">
+            <generator class="assigned"/>
+          </id>
+
+          <!-- 简单字符串属性: 科室名称 -->
+          <property
+            name="departmentName"
+            column="departmentName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单日期型属性: 成立日期 -->
+          <property
+            name="bornDate"
+            column="bornDate"
+            	type="timestamp"
+            	length="10"
+          />
+
+          <!-- 简单字符串属性: 负责人 -->
+          <property
+            name="chargeMan"
+            column="chargeMan"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

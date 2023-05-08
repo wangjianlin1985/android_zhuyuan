@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Drug" table="Drug">
+
+          <!-- 主键药品id -->
+          <id name="drugId" column="drugId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 药品名称 -->
+          <property
+            name="drugName"
+            column="drugName"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 药品单位 -->
+          <property
+            name="unit"
+            column="unit"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单浮点型属性: 药品单价 -->
+          <property
+            name="price"
+            column="price"
+            type="float"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 

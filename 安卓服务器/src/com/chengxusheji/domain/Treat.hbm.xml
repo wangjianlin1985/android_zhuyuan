@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+	"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+	"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping package="com.chengxusheji.domain">
+
+	<class name="Treat" table="Treat">
+
+          <!-- 主键治疗id -->
+          <id name="treatId" column="treatId">
+            <generator class="native"/>
+          </id>
+
+          <!-- 简单字符串属性: 治疗名称 -->
+          <property
+            name="treatName"
+            column="treatName"
+            type="string"
+            length="30"
+          />
+
+          <!-- 多对一属性: 病人 -->
+          <many-to-one name="patientObj"
+            column="patientObj"
+            class="Patient"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 诊断情况 -->
+          <property
+            name="diagnosis"
+            column="diagnosis"
+            type="string"
+            length="500"
+          />
+
+          <!-- 简单字符串属性: 治疗记录 -->
+          <property
+            name="treatContent"
+            column="treatContent"
+            type="string"
+            length="500"
+          />
+
+          <!-- 简单字符串属性: 治疗结果 -->
+          <property
+            name="treatResult"
+            column="treatResult"
+            type="string"
+            length="500"
+          />
+
+          <!-- 多对一属性: 主治医生 -->
+          <many-to-one name="doctorObj"
+            column="doctorObj"
+            class="Doctor"
+            lazy="false"
+            outer-join="true"
+            cascade="save-update"
+          />
+
+          <!-- 简单字符串属性: 治疗开始时间 -->
+          <property
+            name="startTime"
+            column="startTime"
+            type="string"
+            length="20"
+          />
+
+          <!-- 简单字符串属性: 疗程时间 -->
+          <property
+            name="timeLong"
+            column="timeLong"
+            type="string"
+            length="20"
+          />
+
+
+		 
+		
+	</class>
+	
+</hibernate-mapping>
+ 
